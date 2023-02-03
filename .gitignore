@@ -21,7 +21,7 @@ x86/
 packages/
 
 # .NET Core files
-*.csproj.user
+.*.csproj.user
 *.nuget.config
 *.sln.cache
 nuget.config
