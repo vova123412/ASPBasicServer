@@ -2,7 +2,7 @@ trigger:
 - azure-piplines
    
 pool:
-  vmImage: 'default'
+  vmImage: 'Azure Pipelines'
    
 
 variables:
@@ -12,7 +12,3 @@ variables:
 steps:
 - task: Docker@2
   displayName: Build an image
-  inputs:
-    repository: $(imageName)
-    command: build
-    Dockerfile: ./Dockerfile
