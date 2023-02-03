@@ -1,8 +1,8 @@
 trigger:
 - azure-piplines
    
-pool:
-  vmImage: 'selfhost'
+pool: 'MyPool'
+
    
 
 variables:
