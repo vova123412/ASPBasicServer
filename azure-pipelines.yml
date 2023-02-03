@@ -2,7 +2,7 @@ trigger:
 - azure-piplines
    
 pool:
-  vmImage: 'default'
+  vmImage: 'selfhost'
    
 
 variables:
