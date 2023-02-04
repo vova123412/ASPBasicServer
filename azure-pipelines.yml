@@ -1,5 +1,7 @@
 trigger:
 - azure-piplines
+
+   
    
 pool:
   demands: Limit -equals DisAbleParallel 
