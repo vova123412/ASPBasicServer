@@ -4,7 +4,7 @@
 pool: 'selfhost'
 
 variables:
-  imageName: 'amir2023/aspapp'
+  imageName: 'amir2023/aspbasicserver'
 steps:
 - task: PowerShell@2
   displayName: 'Run Script'
@@ -42,4 +42,4 @@ steps:
   displayName: 'Push Docker Image'
   inputs:
     command: 'push'
-    arguments: '$(imageName):$(Build.BuildId)'
+    arguments: '$(imageName):1.0'
