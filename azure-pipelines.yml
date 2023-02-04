@@ -13,16 +13,3 @@ steps:
     command: 'restore'
     feedsToUse: 'select'
     vstsFeed: 'b9b6c790-a219-43e7-a801-45a3e16122d1'
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'build'
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'publish'
-    publishWebProjects: true
-- task: Docker@2
-  inputs:
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
-
-
