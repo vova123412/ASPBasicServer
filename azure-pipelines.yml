@@ -1,16 +1,23 @@
 trigger:
 - azure-piplines
-
-   
-   
 pool:
   demands: Limit -equals DisAbleParallel 
-   
 
 variables:
   imageName: 'pipelines-javascript-docker'
   DOCKER_BUILDKIT: 1
     
 steps:
-- task: Docker@2
-  displayName: Build an image
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'restore'
+    feedsToUse: 'select'
+    vstsFeed: 'b9b6c790-a219-43e7-a801-45a3e16122d1'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'publish'
+    publishWebProjects: true
+
