@@ -6,11 +6,6 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- task: DownloadSecureFile@1
-  displayName: 'Download Restore Script'
-  inputs:
-    secureFile: 'RestoreScript.ps1'
-
 - task: PowerShell@2
   displayName: 'Run Restore Script'
   inputs:
