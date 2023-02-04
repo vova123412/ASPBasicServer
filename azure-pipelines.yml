@@ -1,6 +1,5 @@
 # ASP.NET Core Build and Publish
 # Build and deploy ASP.NET Core app to Azure
-# https://docs.microsoft.com/en-us/azure/devops/pipelines/languages/dotnet-core?view=azure-devops
 
 pool:
   vmImage: 'windows-latest'
