@@ -6,7 +6,7 @@ pool:
 
 steps:
 - task: PowerShell@2
-  displayName: 'Run Restore Script'
+  displayName: 'Run Script'
   inputs:
     targetType: 'filePath'
     filePath: '$(System.ArtifactsDirectory)/updateversion.ps1 "1.2.3.4"'
