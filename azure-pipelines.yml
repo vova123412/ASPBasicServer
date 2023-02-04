@@ -4,7 +4,7 @@
 pool:
   vmImage: 'windows-latest'
 variables:
-  imageName: 'myimage'
+  imageName: 'amir2023/aspapp'
 steps:
 - task: PowerShell@2
   displayName: 'Run Script'
