@@ -1,8 +1,8 @@
 # ASP.NET Core Build and Publish
 # Build and deploy ASP.NET Core app to Azure
 
-pool:
-  vmImage: 'windows-latest'
+pool: 'selfhost'
+
 variables:
   imageName: 'amir2023/aspapp'
 steps:
