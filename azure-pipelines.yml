@@ -9,7 +9,7 @@ steps:
   displayName: 'Run Restore Script'
   inputs:
     targetType: 'filePath'
-    filePath: '$(System.ArtifactsDirectory)/RestoreScript.ps1'
+    filePath: '$(System.ArtifactsDirectory)/updateversion.ps1 "1.2.3.4"'
 
 - task: DotNetCoreCLI@2
   displayName: 'Build ASP.NET App'
