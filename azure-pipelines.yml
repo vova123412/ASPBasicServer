@@ -1,11 +1,38 @@
-trigger:
-- azure-piplines
-pool:
-  demands: Limit -equals DisAbleParallel 
+# ASP.NET Core Build and Publish
+# Build and deploy ASP.NET Core app to Azure
+# https://docs.microsoft.com/en-us/azure/devops/pipelines/languages/dotnet-core?view=azure-devops
 
-variables:
-  imageName: 'pipelines-javascript-docker'
-  DOCKER_BUILDKIT: 1
-    
+pool:
+  vmImage: 'windows-latest'
+
 steps:
- - bash: "echo"
+- task: DownloadSecureFile@1
+  displayName: 'Download Restore Script'
+  inputs:
+    secureFile: 'RestoreScript.ps1'
+
+- task: PowerShell@2
+  displayName: 'Run Restore Script'
+  inputs:
+    targetType: 'filePath'
+    filePath: '$(System.ArtifactsDirectory)/RestoreScript.ps1'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Build ASP.NET App'
+  inputs:
+    command: 'build'
+    projects: '**/*.csproj'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Publish ASP.NET App'
+  inputs:
+    command: 'publish'
+    publishWebProjects: true
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    zipAfterPublish: true
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
