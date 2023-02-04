@@ -1,8 +1,8 @@
 trigger:
 - azure-piplines
    
-pool: 'selfhost'
-
+pool:
+  demands: Limit -equals DisAbleParallel 
    
 
 variables:
