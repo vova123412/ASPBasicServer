@@ -51,6 +51,5 @@ steps:
   displayName: 'Push Docker Image'
   inputs:
     command: 'push'
-    repository: '$(imageRepository)'
-    arguments: '$(imageName):$(Build.BuildId)'
+    repository: '$(imageRepository)\$(imageName)'
 
