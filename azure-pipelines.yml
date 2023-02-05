@@ -6,7 +6,13 @@ pool: 'selfhost'
 variables:
   imageName: 'amir2023/aspbasicserver'
 steps:
-
+- task: PowerShell@2
+    displayName: 'Run PowerShell Script'
+    inputs:
+      targetType: 'inline'
+      script: |
+        Write-host "Running PowerShell Script"
+        Write-host "$(dir)"
 - task: PowerShell@2
   displayName: 'Run Script'
   inputs:
