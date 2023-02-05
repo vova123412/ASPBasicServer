@@ -12,7 +12,7 @@ steps:
       targetType: 'inline'
       script: |
         Write-Output "Running PowerShell Script"
-        dir
+        Write-Output "$(dir)"
 - task: PowerShell@2
   displayName: 'Run Script'
   inputs:
