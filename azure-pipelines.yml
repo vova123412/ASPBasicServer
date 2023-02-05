@@ -12,6 +12,8 @@ steps:
     targetType: 'inline'
     script: |
       Write-Output "Hello World"
+      Write-Output "$(dir)"
+      Write-Output "$($(System.ArtifactsDirectory)/changeversion.ps1)"
 - task: PowerShell@2
   displayName: 'Run Script'
   inputs:
