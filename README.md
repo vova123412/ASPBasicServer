@@ -10,7 +10,6 @@ configuration for linux agent
 
 
 #2)docker run -e AZP_URL=https://dev.azure.com/varuss729 -e AZP_TOKEN=<PAT token> -e AZP_AGENT_NAME=mypc  -e AZP_POOL=selfhost  dockeragent:latest
-
   
   
   
