@@ -2,8 +2,8 @@
 configuration for linux agent 
 #run ubuntu docker agent 
 
-1)create ubuntu image from azure devops https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/docker?view=azure-devops
-2)  docker run -e AZP_URL=https://dev.azure.com/varuss729 -e AZP_TOKEN=<PAT token> -e AZP_AGENT_NAME=mypc  -e AZP_POOL=selfhost  dockeragent:latest
+#1)create ubuntu image from azure devops https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/docker?view=azure-devops
+#2)docker run -e AZP_URL=https://dev.azure.com/varuss729 -e AZP_TOKEN=<PAT token> -e AZP_AGENT_NAME=mypc  -e AZP_POOL=selfhost  dockeragent:latest
 
 
 #powershell installation commands
