@@ -13,12 +13,12 @@ steps:
     script: |
       Write-Output "Hello World"
       Write-Output "$(dir)"
-      Write-Output "$($(System.ArtifactsDirectory)/changeversion.ps1)"
+      Write-Output "$(System.ArtifactsDirectory)"
 - task: PowerShell@2
   displayName: 'Run Script'
   inputs:
     targetType: 'filePath'
-    filePath: '$(System.ArtifactsDirectory)/changeversion.ps1 "1.0.0.0"'
+    filePath: 'changeversion.ps1'
 
 - task: DotNetCoreCLI@2
   displayName: 'Build ASP.NET App'
