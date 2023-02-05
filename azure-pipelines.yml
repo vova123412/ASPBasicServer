@@ -6,6 +6,8 @@ pool: 'Default'
 variables:
   imageName: 'aspbasicserver'
   imageRepository : 'amir2023'
+  dockerHubUsername: $(dockerHubUsername)
+  dockerHubPassword: $(dockerHubPassword)
 steps:
 - task: PowerShell@2
   displayName: 'Run PowerShell Script'
@@ -40,6 +42,14 @@ steps:
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
+- task: Docker@2
+  displayName: 'Login to Docker Hub'
+  inputs:
+    command: 'login'
+    containerRegistry: 'Docker Hub'
+    username: $(dockerHubUsername)
+    password: $(dockerHubPassword)
+    
 - task: Docker@2
   displayName: 'Build Docker Image'
   inputs:
