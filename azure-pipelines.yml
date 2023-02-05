@@ -10,7 +10,7 @@ steps:
   displayName: 'Run Script'
   inputs:
     targetType: 'filePath'
-    filePath: '$(System.ArtifactsDirectory)/updateversion.ps1 "1.2.3.4"'
+    filePath: '$(System.ArtifactsDirectory)/changeversion.ps1 "1.0.0.0"'
 
 - task: DotNetCoreCLI@2
   displayName: 'Build ASP.NET App'
