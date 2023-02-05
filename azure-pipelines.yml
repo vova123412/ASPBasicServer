@@ -44,7 +44,7 @@ steps:
   displayName: 'Build Docker Image'
   inputs:
     command: 'build'
-    arguments: '-f $(Build.SourcesDirectory)/Dockerfile -t $(imageName):1.0'
+    arguments: '-f $(Build.SourcesDirectory)/Dockerfile -t $(imageRepository)/$(imageName):$(Build.BuildId)'
 
 
 - task: Docker@2
