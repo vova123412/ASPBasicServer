@@ -14,7 +14,7 @@ configuration for linux agent
   
   
 
-# powershell installation command 
+# powershell installation commands
   1) apt-get update
   2) apt-get install -y wget apt-transport-https software-properties-common
   3) wget -q https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb
@@ -24,10 +24,10 @@ configuration for linux agent
   7) apt-get install -y powershell
   
   
-# dotnet installation command
+# dotnet installation commands
   apt-get install -y dotnet-sdk-7.0
  
-# docker installation commant
+# docker installation commands
  1) apt-get update
  2) apt-get install \
     ca-certificates \
