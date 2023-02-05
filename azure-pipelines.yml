@@ -6,19 +6,12 @@ pool: 'selfhost'
 variables:
   imageName: 'amir2023/aspbasicserver'
 steps:
-- stage: Build
-  jobs:
-  - job: RunPowerShellScript
-    steps:
-    - task: PowerShell@2
-      displayName: 'Run PowerShell Script'
-      inputs:
-        targetType: 'inline'
-        script: |
-          Write-Output "Running PowerShell Script"
-          # Add your PowerShell script here
-          
-          
+- task: PowerShell@2
+  displayName: 'Run PowerShell Script'
+  inputs:
+    targetType: 'inline'
+    script: |
+      Write-Output "Hello World"
 - task: PowerShell@2
   displayName: 'Run Script'
   inputs:
