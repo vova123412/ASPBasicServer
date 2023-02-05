@@ -7,13 +7,6 @@ variables:
   imageName: 'amir2023/aspbasicserver'
 steps:
 - task: PowerShell@2
-    displayName: 'Run PowerShell Script'
-    inputs:
-      targetType: 'inline'
-      script: |
-        Write-host "Running PowerShell Script"
-        Write-host "$(dir)"
-- task: PowerShell@2
   displayName: 'Run Script'
   inputs:
     targetType: 'filePath'
@@ -50,3 +43,15 @@ steps:
   inputs:
     command: 'push'
     arguments: '$(imageName):1.0'
+    
+jobs:
+- job: RunPowerShellScript
+  steps:
+  - task: PowerShell@2
+    displayName: 'Run PowerShell Script'
+    inputs:
+      targetType: 'inline'
+      script: |
+        Write-Output "Running PowerShell Script"
+        # Add your PowerShell script here
+
