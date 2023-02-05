@@ -4,8 +4,7 @@
 pool: 'Default'
 
 variables:
-  imageRepository: 'amir2023'
-  imageName: 'aspbasicserver'
+  imageName: 'amir2023/aspbasicserver'
 steps:
 - task: PowerShell@2
   displayName: 'Run PowerShell Script'
@@ -51,6 +50,5 @@ steps:
   displayName: 'Push Docker Image'
   inputs:
     command: 'push'
-    repository: '$(imageRepository)'
-    arguments: '$(imageName):1.0'
+    arguments: '$(imageName):$(Build.BuildId)'
 
