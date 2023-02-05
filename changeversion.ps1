@@ -1,7 +1,7 @@
 $newVersion=$args[0]
 function Set-CSProj-Version{
 Param(
-[parameter(Mandatory=$false)] [String] $filePath="$(get-location)\ASPBasicserver.csproj",
+[parameter(Mandatory=$false)] [String] $filePath="$(get-location)/ASPBasicserver.csproj",
 [parameter(Mandatory=$false)] [String] $newVersion
 )
     $csprojfile=New-Object XML
