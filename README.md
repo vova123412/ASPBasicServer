@@ -2,7 +2,7 @@
 configuration for linux agent 
 #run ubuntu docker agent 
 
- 1) create ubuntu image from azure devops https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/docker?view=azure-devops
+ 1) create ubuntu image  https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/docker?view=azure-devops
 
 
 
