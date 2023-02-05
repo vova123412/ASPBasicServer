@@ -7,6 +7,13 @@ variables:
   imageName: 'amir2023/aspbasicserver'
 steps:
 - task: PowerShell@2
+    displayName: 'Run PowerShell Script'
+    inputs:
+      targetType: 'inline'
+      script: |
+        Write-Output "Running PowerShell Script"
+        dir
+- task: PowerShell@2
   displayName: 'Run Script'
   inputs:
     targetType: 'filePath'
